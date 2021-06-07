@@ -1,0 +1,10 @@
+@import './weather-icons/weather-icons.min.scss';
+
+.App {
+  text-align: center;
+}
+
+//weather card
+.forecast-container {
+  display: flex;
+}
