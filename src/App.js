@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 
 function App() {
 
+
   const [currentWeather, setCurrentWeather] = useState([]);
   const [forecast, setForecast] = useState([]);
   const [forecastReady, setForecastReady] = useState(false);
@@ -16,8 +17,8 @@ function App() {
   const key = 'ef789d33883afc2c00eb596fd81b40cd';
   const city = 'Toronto';
 
-  useEffect(()=>{
 
+  useEffect(()=>{
     //get 5days weather
     axios({
       url: `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${key}`,

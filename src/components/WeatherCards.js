@@ -8,8 +8,8 @@ const WeatherCards = ({ forecast }) => {
             {
                 forecast.map((weather, index)=>{
                     return(
-                        <li>
-                            <Card key={index} id={weather.weather[0].id} weather={weather.weather[0].main} max={weather.main.temp_max} min={weather.main.temp_min} day={weather.dt_txt}/>
+                        <li key={index}>
+                            <Card id={weather.weather[0].id} weather={weather.weather[0].main} max={weather.main.temp_max} min={weather.main.temp_min} day={weather.dt_txt}/>
                         </li>
                     )
                 })
