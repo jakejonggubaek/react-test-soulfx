@@ -11,16 +11,8 @@ function App() {
   const [currentWeather, setCurrentWeather] = useState([]);
   const [forecast, setForecast] = useState([]);
   const [isDay, setIsDay] = useState(true);
-  const [currentReady, setCurrentReady] = useState(false);
   const [forecastReady, setForecastReady] = useState(false);
 
-  //Get current date and day
-  const today = new Date();
-  const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  const month = monthNames[today.getMonth()];
-  const date = today.getDate();
-  const day = dayNames[today.getDay()];
   const timestamp = Math.round((Date.now()/1000));
 
   //API key and location (required)
@@ -49,7 +41,15 @@ function App() {
       }else {
         setIsDay(false);
       }
-      setCurrentReady(true);
+
+      // const background = document.querySelector('.App');
+
+      // if(isDay){
+      //   background.style.backgroundImage = "url(./assets/weather.jpg)";
+      // }else {
+      //   background.style.backgroundImage = "url(./assets/weather.jpg)";
+      // }
+
     });
 
     //get 5days weather
@@ -63,8 +63,6 @@ function App() {
         units: 'metric'
       }
     }).then((response) => {
-      console.log(response.data);
-
       setCurrentWeather(response.data.list[0]);
 
       //temporary array
@@ -79,6 +77,7 @@ function App() {
       setForecast([...weatherArray]);
       setForecastReady(true);
     });
+  // eslint-disable-next-line
   }, [])
 
 
