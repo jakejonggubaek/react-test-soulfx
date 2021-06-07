@@ -51,12 +51,14 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {
-        forecastReady && <CurrentWeather temp={currentWeather.main.temp} senTemp={currentWeather.main.feels_like} weather={currentWeather.weather[0].main}  currentWeather={currentWeather} />
-      }
-      {
-        forecastReady && <WeatherCards forecast={forecast}/>
-      }
+      <main>
+        {
+          forecastReady && <CurrentWeather temp={currentWeather.main.temp} senTemp={currentWeather.main.feels_like} weather={currentWeather.weather[0].main}  currentWeather={currentWeather} />
+        }
+        {
+          forecastReady && <WeatherCards forecast={forecast}/>
+        }
+      </main>
       <Footer />
     </div>
   );

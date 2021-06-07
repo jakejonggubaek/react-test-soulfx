@@ -28,7 +28,7 @@ const CurrentWeather = ({currentWeather, temp, senTemp, weather}) => {
     }
 
     return (
-        <div className='current-container'>
+        <section className='current-container'>
             <h2>Toronto</h2>
             <p>{monthNames[month]}, {date}th({dayNames[day]})</p>
             <div className='current-weather-icon'>
@@ -43,7 +43,7 @@ const CurrentWeather = ({currentWeather, temp, senTemp, weather}) => {
             <div className='current-sensible-temp'>
                 feels like {senTemp}℃
             </div>
-        </div>
+        </section>
     )
 }
 

@@ -40,16 +40,32 @@ h1 {
     font-size: 100px;
     margin-top: 40px;
   }
+
+  @media screen and (max-width: 600px){
+    margin: 30px auto;
+  }
+  
 }
 
 //weather card
 .forecast-container {
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+}
+
+footer {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  @media screen and (max-width: 600px){
-    flex-direction: column
-  }
-  
+  background-color: black;
+  bottom: 0;
+  width: 100vw;
+  height: 30px;
+  color: #fff;
 }

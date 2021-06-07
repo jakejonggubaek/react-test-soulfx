@@ -3,5 +3,9 @@
     margin: 20px;
     padding: 5px;
     border-radius: 5px;
+
+    @media screen and (max-width: 600px){
+      margin: 5px;
+    }
 }
 

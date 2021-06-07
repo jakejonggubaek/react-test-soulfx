@@ -1,8 +1,8 @@
 const Footer = () => {
     return (
-        <div>
-            
-        </div>
+        <footer>
+            <p>Created by Jake Baek 2021</p>
+        </footer>
     )
 }
 
