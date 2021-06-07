@@ -10,47 +10,13 @@ function App() {
 
   const [currentWeather, setCurrentWeather] = useState([]);
   const [forecast, setForecast] = useState([]);
-  const [isDay, setIsDay] = useState(true);
   const [forecastReady, setForecastReady] = useState(false);
-
-  const timestamp = Math.round((Date.now()/1000));
 
   //API key and location (required)
   const key = 'ef789d33883afc2c00eb596fd81b40cd';
   const city = 'Toronto';
 
   useEffect(()=>{
-
-    //Get Current Weather data
-    axios({
-      url: `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`,
-      method: 'GET',
-      dataResponse: 'json',
-      params: {
-        q: 'Toronto',
-        appid: key,
-        units: 'metric'
-      }
-    }).then((response) => {
-
-      const sunrise = response.data.sys.sunrise;
-      const sunset = response.data.sys.sunset;
-
-      if (timestamp > sunrise && timestamp < sunset) {
-        setIsDay(true);
-      }else {
-        setIsDay(false);
-      }
-
-      // const background = document.querySelector('.App');
-
-      // if(isDay){
-      //   background.style.backgroundImage = "url(./assets/weather.jpg)";
-      // }else {
-      //   background.style.backgroundImage = "url(./assets/weather.jpg)";
-      // }
-
-    });
 
     //get 5days weather
     axios({

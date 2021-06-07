@@ -1,8 +1,8 @@
 const Header = () => {
     return (
-        <div>
+        <header>
             <h1>Weather Forecast for Toronto</h1>
-        </div>
+        </header>
     )
 }
 
